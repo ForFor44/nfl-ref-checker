@@ -2,10 +2,10 @@ import pandas as pd
 
 # List of CSV file names
 csv_files = [
-    "allSeasons/22 reg/4thdownALLPEN.csv",
-    "allSeasons/22 reg/PENonSCORINGDRIVES.csv",
-    "allSeasons/22 reg/22Filtered_EVERYPEN.csv",
-    "allSeasons/22 reg/4thdownALLPEN.csv",
+    "allSeasons/22 playoffs/divisionalSCORINGDRIVES.csv",
+    "allSeasons/22 playoffs/divisionalREDZONEPEN.csv",
+    "allSeasons/22 playoffs/divPlayoffs_22Filtered_EVERYPEN.csv",
+    "allSeasons/22 playoffs/divisional4THDOWN.csv",
 ]
 
 # Empty list to store dataframes
@@ -26,6 +26,6 @@ combined_df = pd.concat(dfs, ignore_index=True)
 unique_df = combined_df.drop_duplicates(subset=["Description"])
 
 # Write the resulting dataframe to a new CSV file
-unique_df.to_csv("Unique_Combined.csv", index=False)
+unique_df.to_csv("divPlayoffs_22Unique_Combined.csv", index=False)
 
 print("Combined CSV with unique 'Description' entries created: 'Unique_Combined.csv'")

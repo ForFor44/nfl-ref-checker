@@ -2,10 +2,7 @@ import pandas as pd
 
 # Load in your season's PEN csv's here
 csv_files = [
-    "allSeasons/22 reg/ALLPEN wk1-4.csv",
-    "allSeasons/22 reg/ALLPEN wk5-9.csv",
-    "allSeasons/22 reg/ALLPEN wk10-14.csv",
-    "allSeasons/22 reg/ALLPEN wk15-18.csv",
+    "allSeasons/22 playoffs/EVERYPENdivisional.csv",
 ]
 
 for file in csv_files:
@@ -40,6 +37,6 @@ for csv_file in csv_files:
 combined_df = pd.concat(filtered_dfs, ignore_index=True)
 
 # Set this to your corresponding season filtered everypen
-combined_df.to_csv("22Filtered_EVERYPEN.csv", index=False)
+combined_df.to_csv("divPlayoffs_22Filtered_EVERYPEN.csv", index=False)
 
 print("Filtered CSV created: 'Filtered_EVERYPEN.csv'")

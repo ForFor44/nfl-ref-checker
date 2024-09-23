@@ -2,9 +2,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load penalty data
-penalty_data_csv = "insights/regular_23.csv"  # Updated with actual file path
+penalty_data_csv = "insights/holdingPI_21.csv"  # Updated with actual file path
 beneficiary_data_csv = (
-    "insights/23_beneficiary_regular.csv"  # Updated with actual file path
+    "insights/21_holdingPI_beneficiary.csv"  # Updated with actual file path
 )
 
 # Dictionary of NFL teams and their corresponding colors (example colors)
@@ -70,14 +70,14 @@ for team in penalties_cumulative.columns:
         color=color,
     )
 
-plt.title("23R_Cumulative Penalties by Team")
+plt.title("21HPI_Cumulative Penalties by Team")
 plt.xlabel("Week")
 plt.ylabel("Number of Penalties")
 plt.legend(title="Team", bbox_to_anchor=(1.05, 1), loc="upper left")
 plt.tight_layout()
 
 # Save the penalties graph
-plt.savefig("23R_Cumulative_Penalties_Team_Colors.png")
+plt.savefig("21HPI_Cumulative_Penalties_Team_Colors.png")
 plt.show()
 
 # Plot cumulative beneficiaries for each team with team-specific colors
@@ -91,12 +91,12 @@ for team in beneficiaries_cumulative.columns:
         color=color,
     )
 
-plt.title("23R_Cumulative Beneficiaries of Penalties by Team")
+plt.title("21HPI_Cumulative Beneficiaries of Penalties by Team")
 plt.xlabel("Week")
 plt.ylabel("Number of Beneficiaries")
 plt.legend(title="Team", bbox_to_anchor=(1.05, 1), loc="upper left")
 plt.tight_layout()
 
 # Save the beneficiaries graph
-plt.savefig("23R_Cumulative_Beneficiaries_Team_Colors.png")
+plt.savefig("21HPI_Cumulative_Beneficiaries_Team_Colors.png")
 plt.show()

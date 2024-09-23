@@ -2,9 +2,9 @@ import pandas as pd
 import scipy.stats as stats
 
 # Load penalty data
-penalty_data_csv = "insights/regular_23.csv"  # Updated with actual file path
+penalty_data_csv = "insights/holdingPI_21.csv"  # Updated with actual file path
 beneficiary_data_csv = (
-    "insights/23_beneficiary_regular.csv"  # Updated with actual file path
+    "insights/21_holdingPI_beneficiary.csv"  # Updated with actual file path
 )
 
 # Read the CSVs into dataframes

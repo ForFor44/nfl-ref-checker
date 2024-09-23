@@ -2,7 +2,7 @@ import pandas as pd
 import re
 
 # Load the filtered data from the previous step
-input_csv = "allSeasons/22 playoffs/divPlayoffs_22Filtered_Unique_Combined.csv"
+input_csv = "allSeasons/23 reg/23Filtered_EVERYPEN.csv"
 
 # Read the CSV into a dataframe
 df = pd.read_csv(input_csv)
@@ -30,6 +30,6 @@ penalty_counts = df.groupby(["Week", "Team"]).size().unstack(fill_value=0)
 penalty_counts.loc["All Weeks"] = penalty_counts.sum()
 
 # Write the result to a new CSV
-penalty_counts.to_csv("divPlayoffs_22.csv")
+penalty_counts.to_csv("holdingPI_23.csv")
 
 print("Penalties by week CSV created with 'All Weeks' summary: 'Penalties_By_Week.csv'")

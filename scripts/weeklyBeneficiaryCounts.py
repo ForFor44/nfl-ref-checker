@@ -2,7 +2,7 @@ import pandas as pd
 import re
 
 # Load the filtered data from the previous step
-input_csv = "allSeasons/22 playoffs/divPlayoffs_22Filtered_Unique_Combined.csv"
+input_csv = "allSeasons/23 reg/23Filtered_EVERYPEN.csv"
 
 # Read the CSV into a dataframe
 df = pd.read_csv(input_csv)
@@ -49,7 +49,7 @@ positive_penalty_counts = (
 positive_penalty_counts.loc["All Weeks"] = positive_penalty_counts.sum()
 
 # Write the result to a new CSV
-positive_penalty_counts.to_csv("22_divPlayoffs_beneficiary.csv")
+positive_penalty_counts.to_csv("23_holdingPI_beneficiary.csv")
 
 print(
     "Positive penalties by week CSV created with 'All Weeks' summary: 'Positive_Penalties_By_Week.csv'"
